@@ -1,0 +1,381 @@
+@font-face {
+    font-family: "Bai-Jamjuree-Regular";
+    src: url(Bai_Jamjuree/BaiJamjuree-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Bai-Jamjuree-SemiBold";
+    src: url(Bai_Jamjuree/BaiJamjuree-SemiBold.ttf);
+}
+
+:root {
+    /* Primary colors */
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --cyan-button-shadow: rgba(26 127 112 / 0.8);
+    --blue-button-shadow: rgba(51 63 191 / 0.8);
+
+    /* Neutral colors */
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+
+    /* Header colors */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    /* Footer colors */
+    --footer-background: rgb(238 240 241);
+
+    /* Font size */
+    font-size: 15px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main,
+div,
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+main > div {
+    padding: 10rem 2rem 0 2rem;
+}
+
+main > div:nth-child(1) {
+    padding-top: 7rem;
+}
+
+main > div:nth-child(4),
+main > div:nth-child(5) {
+    padding: 6rem 2rem 0 2rem;
+}
+
+main > div:last-child {
+    padding-bottom: 10rem;
+}
+
+img {
+    max-width: 22rem;
+}
+
+h1, h2,
+h3, p {
+    text-align: center;
+}
+
+h1,
+h2, 
+h3 {
+    font-family: "Bai-Jamjuree-SemiBold", sans-serif;
+    color: var(--dark-grayish-blue);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    font-family: "Bai-Jamjuree-Regular", sans-serif;
+    font-size: 1.05rem;
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    margin: 1rem 0.4rem 3rem 0.4rem;
+}
+
+button {
+    width: 100%;
+    font-family: "Bai-Jamjuree-SemiBold", sans-serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    padding: 1.1rem 3rem;
+    border: none;
+    border-radius: 3rem;
+    transition: 0.2s ease-in-out;
+}
+
+button.ios-download-button {
+    background-color: var(--strong-cyan);
+    box-shadow: 0 0.2rem var(--cyan-button-shadow),
+                0 1rem 1rem rgba(0 0 0 / 0.1);
+    
+}
+
+button.mac-download-button {
+    background-color: var(--light-blue);
+    box-shadow: 0 0.2rem var(--blue-button-shadow),
+                0 1rem 1rem rgba(0 0 0 / 0.1);
+    margin-top: 1.6rem;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.intro-section {
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.mac-section img {
+    margin: 1rem 0 4rem 0;
+}
+
+.ios-section img {
+    margin-bottom: 0;
+}
+
+.features-section .feature-columns {
+    padding-top: 3rem;
+}
+
+.features-section .feature-columns img {
+    padding-bottom: 3rem;
+}
+
+.partnership-section img:not(:last-child) {
+    padding-bottom: 4rem;
+}
+
+.outro-section p {
+    margin: 1rem 0.5rem 3rem 0.5rem;
+}
+
+footer {
+    background-color: var(--footer-background);
+    padding: 3rem 0;
+}
+
+footer > img {
+    max-width: 3.8rem;
+    max-height: 3.8rem;
+}
+
+footer .footer-links {
+    line-height: 2.8;
+    margin: 2.4rem 0;
+}
+
+footer .footer-links a {
+    font-family: "Bai-Jamjuree-Regular", sans-serif;
+    font-size: 1.2rem;
+    color: var(--dark-grayish-blue);
+    text-decoration: none;
+}
+
+footer .social-links {
+    flex-direction: row;
+}
+
+footer .social-links img:not(:last-child) {
+    margin-right: 2.8rem;
+}
+
+footer .footer-links a,
+footer .social-links img {
+    transition: 0.2s ease-in-out;
+}
+
+footer .footer-links a:hover {
+    color: var(--strong-cyan);
+}
+
+footer .social-links img:hover {
+    filter: invert(58%) sepia(88%) saturate(349%) 
+    hue-rotate(121deg) brightness(88%) contrast(93%);
+}
+
+.attribution {
+    width: 100%;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--black);   
+}
+
+.attribution span {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.attribution span a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+    
+    p {
+        font-size: 1.2rem;
+    }
+
+    .intro-section > p,
+    .mac-section > p,
+    .ios-section > p,
+    .features-section > p,
+    .outro-section > p {
+        padding: 0 18rem;
+    }
+
+    img {
+        max-width: none;
+    }
+
+    .buttons-container {
+        flex-direction: row;
+    }
+
+    button {
+        max-width: 15rem;
+        padding: 1rem 2.4rem;
+    }
+
+    button.mac-download-button {
+        margin: 0 0 0 1rem;
+    }
+
+    .intro-section {
+        background-image: url(images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+    }
+
+    .intro-section p {
+        font-family: "Bai-Jamjuree-SemiBold";
+        margin: 1rem 2rem 3rem 2rem;
+    }
+
+    .mac-section {
+        padding: 10rem 0 0 0;
+    }
+
+    .mac-section p {
+        margin: 1rem 2.8rem 5rem 2.8rem;
+    }
+
+    .mac-section .mac-section-columns {
+        flex-direction: row;
+    }
+
+    .mac-section-columns img {
+        margin: 0 8.5rem 0 0;
+    }
+
+    .mac-section-columns .content {
+        align-items: flex-start;
+        
+    }
+    
+    .mac-section-columns .content p {
+        text-align: left;
+        margin: 1rem 5rem 4rem 0;
+    }
+
+    .ios-section p {
+        margin: 1rem 0.4rem 6rem 0.4rem;
+    }
+
+    .features-section .feature-columns {
+        flex-direction: row;
+    }
+
+    .features-section .feature-columns p {
+        margin: 1rem 1rem 3rem 1rem;
+    }
+
+    :first-child.column img {
+        padding-bottom: calc(3rem - 8px);
+    }
+
+    :first-child.column p {
+        margin: 1rem 1rem calc(2rem - 10px) 1rem;
+    }
+
+    main > div:nth-child(5) {
+        padding: 10rem 2rem 0 2rem;
+        flex-direction: row;
+    }
+
+    .partnership-section img:not(:last-child) {
+        padding: 0 8.5rem 0 0;
+    }
+
+    .outro-section p {
+        margin: 1rem 0.8rem 3rem 0.8rem;
+    }
+
+    footer {
+        flex-direction: row;
+        padding: 2rem 10rem;
+    }
+
+    footer .footer-links {
+        display: grid;
+        justify-content: start;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0 10rem;
+        gap: 0 4rem;
+    }
+
+    footer .footer-links span:nth-child(2) {
+        grid-area: 2 / 1;
+    }
+
+    footer .footer-links span:nth-child(3) {
+        grid-area: 1 / 2;
+    }
+
+    footer .footer-links span:nth-child(4) {
+        grid-area: 2 / 2;
+    }
+
+    footer .footer-links span:nth-child(5) {
+        grid-area: 1 / 3;
+    }
+
+    footer .social-links {
+        width: auto;
+        justify-content: flex-end;
+    }
+}

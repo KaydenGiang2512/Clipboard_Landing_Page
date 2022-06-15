@@ -17,8 +17,8 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/responsive-clipboard-landing-page-using-html5-and-css3-qfDHc67Mvz)
+- Live Site URL: (https://kaydengiang2512.github.io/Clipboard_Landing_Page/)
 
 ## My process
 
